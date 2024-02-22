@@ -1,29 +1,42 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Stephen Yang               |
+| Date         | 02/22/2023                 |
+| Course       | Spring                     |
+| Assignment # | 2                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+The objective of the assignment is to implement the notification system.
+The design uses observer pattern that multiple drivers as observer can subscribe to the shop as publisher.
+Once the shop has new delivery request, it will send the notification to the drivers.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/stephenyang0215/cs-665-assignment-2
 
 # Implementation Description 
 
 
 For each assignment, please answer the following:
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+1. Explain the level of flexibility in your implementation, including how new object types can
+be easily added or removed in the future.</br>
+  As the project requires at least five drivers, I've built the driver class which provides the ease to create new drivers.
+  With the driver array list from the shop, we can easily add or remove drivers in the future.
+  Subscriber interface works as an abstract type to declare driver object to subscribe to publisher.
+2. Discuss the simplicity and understandability of your implementation, ensuring that it is
+easy for others to read and maintain.</br>
+  It consists of three major classes: Shop, Driver and DeliveryRequest.
+  The shop class can create delivery request and send notification of order to the drivers who are available.
+  All the available drivers stored in an array list to the shop class. 
+  The delivery request has the information for the order. Any driver receiving the order can run delivery.
+  It offers the simplicity and understandability how each class functions.
+3. Describe how you have avoided duplicated code and why it is important.</br>
+   In this assignment, I applied implementation of interface for subscriber and publisher. 
+   It avoids duplicated code to create either one and allows to reuses the methods from the interface.
+4. If applicable, mention any design patterns you have used and explain why they were
+chosen.</br>
+   This assignment implemented the observer pattern to initialize multiple subscribers to the same publisher.
 
 
 # Maven Commands
