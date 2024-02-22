@@ -23,6 +23,7 @@ public class Driver implements SubscriberBase {
         this.name = number;
         this.available = true;
         shop.subscribe(this);
+        System.out.println("Driver " + this.name);
     }
     /**
      * updateOrder: receive the notification for delivery request

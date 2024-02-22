@@ -57,9 +57,6 @@ public class Shop implements PublisherBase{
      * getDriverList: fetch all the available drivers.
      */
     public ArrayList<Driver> getDriverList() {
-        for (Driver driver: this.driverList) {
-            System.out.println("Driver " + driver.getName());
-        }
         return this.driverList;
     }
     /**
